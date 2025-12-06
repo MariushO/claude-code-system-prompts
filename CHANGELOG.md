@@ -4,6 +4,16 @@ Note: Only use **NEW:** for entirely new prompt files, NOT for new additions/sec
 
 ### Claude Code System Prompts Changelog
 
+# [2.0.58](https://github.com/Piebald-AI/claude-code-system-prompts/commit/d1437449dddae84e888f4751e18add2e6153e135)
+
+- Session notes template: Added new "Current State" section for tracking active work and pending tasks
+- Session notes template: Renamed "User Corrections / Mistakes" to "Errors & Corrections" with expanded description
+- Session notes instructions: Added emphasis on updating "Current State" for continuity after compaction
+- Session notes instructions: Removed instruction about not repeating past session summaries
+- Session notes instructions: Fixed markdown header reference (`'##'` → `'#'`)
+- Documentation URL: Changed from `docs.claude.com/s/claude-code` to `code.claude.com/docs/en/overview`
+- GitHub Action templates: Updated CLI reference URL to `code.claude.com/docs/en/cli-reference`
+
 #### [2.0.57](https://github.com/Piebald-AI/claude-code-system-prompts/commit/8b2ecb38493daf677fcba54746d2c3e40de6f657)
 
 <sub>_No changes to the system prompts in v2.0.57._</sub>

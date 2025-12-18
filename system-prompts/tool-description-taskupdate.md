@@ -1,7 +1,7 @@
 <!--
 name: 'Tool Description: TaskUpdate'
 description: Description for the TaskUpdate tool, which updates Claude's task list
-ccVersion: 2.0.70
+ccVersion: 2.0.72
 -->
 Use this tool to update a task in the task list.
 
@@ -39,6 +39,10 @@ To claim a task, use TeammateTool with the \`assignTask\` or \`claimTask\` opera
 Attempting to update an unclaimed task or a task owned by another agent will fail with an error. Team leads can update any task.
 
 Teammates should add comments while working to signal progress to the team and team lead.
+
+## Staleness
+
+Make sure to read a task's latest state using \`TaskGet\` before updating it.
 
 ## Examples
 

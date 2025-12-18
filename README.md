@@ -28,7 +28,7 @@ Download it and try it out for free!  **https://piebald.ai/**
 
 [![Mentioned in Awesome Claude Code](https://awesome.re/mentioned-badge.svg)](https://github.com/hesreallyhim/awesome-claude-code)
 
-This repository contains an up-to-date list of all Claude Code's various system prompts and their associated token counts as of **[Claude Code v2.0.71](https://www.npmjs.com/package/@anthropic-ai/claude-code/v/2.0.71) (December 16th, 2025).**  It also contains a [**CHANGELOG.md**](./CHANGELOG.md) for the system prompts across 52 versions since v2.0.14.  From the team behind [<img src="https://github.com/Piebald-AI/piebald/raw/main/assets/logo.svg" width="15"> **Piebald.**](https://piebald.ai/)
+This repository contains an up-to-date list of all Claude Code's various system prompts and their associated token counts as of **[Claude Code v2.0.72](https://www.npmjs.com/package/@anthropic-ai/claude-code/v/2.0.72) (December 17th, 2025).**  It also contains a [**CHANGELOG.md**](./CHANGELOG.md) for the system prompts across 53 versions since v2.0.14.  From the team behind [<img src="https://github.com/Piebald-AI/piebald/raw/main/assets/logo.svg" width="15"> **Piebald.**](https://piebald.ai/)
 
 Why multiple "system prompts?"
 
@@ -142,8 +142,8 @@ Text for large system reminders.
 - [Tool Description: Skill](./system-prompts/tool-description-skill.md) (**292** tks) - Tool description for executing skills in the main conversation.
 - [Tool Description: SlashCommand](./system-prompts/tool-description-slashcommand.md) (**355** tks) - Tool description for executing slash commands.
 - [Tool Description: TaskList](./system-prompts/tool-description-tasklist.md) (**307** tks) - Description for the TaskList tool, which lists all tasks in the task list.
-- [Tool Description: TaskUpdate](./system-prompts/tool-description-taskupdate.md) (**589** tks) - Description for the TaskUpdate tool, which updates Claude's task list.
-- [Tool Description: Task](./system-prompts/tool-description-task.md) (**1193** tks) - Tool description for launching specialized sub-agents to handle complex tasks.
+- [Tool Description: TaskUpdate](./system-prompts/tool-description-taskupdate.md) (**615** tks) - Description for the TaskUpdate tool, which updates Claude's task list.
+- [Tool Description: Task](./system-prompts/tool-description-task.md) (**1214** tks) - Tool description for launching specialized sub-agents to handle complex tasks.
 - [Tool Description: TeammateTool's operation parameter](./system-prompts/tool-description-teammatetools-operation-parameter.md) (**163** tks) - Tool description for the TeammateTool's operation parameter.
 - [Tool Description: TodoWrite](./system-prompts/tool-description-todowrite.md) (**2167** tks) - Tool description for creating and managing task lists.
 - [Tool Description: WebFetch](./system-prompts/tool-description-webfetch.md) (**265** tks) - Tool description for web fetch functionality.

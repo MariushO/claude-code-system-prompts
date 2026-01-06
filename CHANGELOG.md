@@ -4,6 +4,27 @@ Note: Only use **NEW:** for entirely new prompt files, NOT for new additions/sec
 
 ### Claude Code System Prompts Changelog
 
+# [2.0.77](https://github.com/Piebald-AI/claude-code-system-prompts/commit/36f34b8)
+
+_-128 tokens_
+
+- **NEW:** Agent Prompt: Task tool (extra notes) - additional notes for Task tool usage (absolute paths, no emojis, no colons before tool calls)
+- **NEW:** Agent Prompt: Command execution specialist - agent prompt for command execution focusing on bash commands
+- **NEW:** Agent Prompt: Plan verification agent - agent prompt for verifying that the main agent correctly executed a plan
+- **NEW:** System Prompt: Chrome browser MCP tools - instructions for loading Chrome browser MCP tools via MCPSearch before use
+- **REMOVED:** Data: GitHub Actions workflow for automated code review (beta) - GitHub Actions workflow template for automated Claude Code reviews
+- **REMOVED:** Tool Description: Task (async return note) - message returned to the model when a subagent launched successfully
+- Agent Prompt: Agent creation architect - updated examples from code-reviewer to test-runner agent
+- Agent Prompt: Status line setup - added vim mode information (INSERT/NORMAL) to available session data
+- System Prompt: Main system prompt - removed "Looking up your own documentation" section with claude-guide agent instructions; added instruction about not using colons before tool calls; numerous variable reference corrections throughout
+- System Reminder: Plan mode is active - added verification section requirement in plan files; clarified that AskUserQuestion is for clarifying requirements, not for plan approval
+- Tool Description: AskUserQuestion - added plan mode note clarifying this tool is for clarifying requirements before finalizing plans, not for requesting plan approval
+- Tool Description: Bash - updated run_in_background parameter description to clarify notification behavior
+- Tool Description: Bash (Git commit and PR creation instructions) - simplified parallel command instructions; removed "You can call multiple tools in a single response" preambles; added GIT_COMMAND_PARALLEL_NOTE variable
+- Tool Description: ExitPlanMode v2 - reorganized "Handling Ambiguity in Plans" section into "Before Using This Tool"; added clarification that this tool inherently requests user approval
+- Tool Description: Skill - reformatted instructions removing XML wrapper tags; added check for already-loaded skills
+- Tool Description: Task - updated background agent output retrieval instructions (now uses output_file with Read/Write tools instead of AgentOutputTool); removed pro-only parallel launch note; updated example agent from code-reviewer to test-runner
+
 #### [2.0.76](https://github.com/Piebald-AI/claude-code-system-prompts/commit/3c9c213)
 
 <sub>_No changes to the system prompts in v2.0.76._</sub>

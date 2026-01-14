@@ -1,9 +1,10 @@
 <!--
 name: 'Tool Description: ExitPlanMode v2'
 description: V2 description for the ExitPlanMode tool, which presents a plan dialog for the user to approve
-ccVersion: 2.1.6
+ccVersion: 2.1.7
 variables:
   - ASK_USER_QUESTION_TOOL_NAME
+  - PERMISSION_SCOPING_GUIDELINES
 -->
 Use this tool when you are in plan mode and have finished writing your plan to the plan file and are ready for user approval.
 
@@ -34,14 +35,7 @@ When calling this tool, you can request prompt-based permissions for bash comman
 - "build the project" matches: npm run build, make, cargo build, etc.
 - Keep descriptions concise but descriptive
 - Only request permissions you actually need for the plan
-- Scope permissions narrowly, like a security-conscious human would:
-  - **Never combine multiple actions into one permission** - split them into separate, specific permissions (e.g. "list pods in namespace X", "view logs in namespace X")
-  - Prefer "run read-only database queries" over "run database queries"
-  - Prefer "run tests in the project" over "run code"
-  - Add constraints like "read-only", "local", "non-destructive" whenever possible. If you only need read-only access, you must only request read-only access.
-  - Prefer not to request overly broad permissions that would grant dangerous access, especially any access to production data or to make irrecoverable changes
-  - When interacting with cloud environments, add constraints like "in the foobar project", "in the baz namespace", "in the foo DB table"
-  - Never request broad tool access like "run k8s commands" - always scope to specific actions and namespaces, ideally with constraints such as read-only
+${ASK_USER_QUESTION_TOOL_NAME}
 
 **Benefits:**
 - Commands matching approved prompts won't require additional permission prompts
@@ -53,13 +47,13 @@ IMPORTANT: Only use this tool when the task requires planning the implementation
 
 ## Before Using This Tool
 Ensure your plan is complete and unambiguous:
-- If you have unresolved questions about requirements or approach, use ${ASK_USER_QUESTION_TOOL_NAME} first (in earlier phases)
+- If you have unresolved questions about requirements or approach, use ${PERMISSION_SCOPING_GUIDELINES} first (in earlier phases)
 - Once your plan is finalized, use THIS tool to request approval
 
-**Important:** Do NOT use ${ASK_USER_QUESTION_TOOL_NAME} to ask "Is this plan okay?" or "Should I proceed?" - that's exactly what THIS tool does. ExitPlanMode inherently requests user approval of your plan.
+**Important:** Do NOT use ${PERMISSION_SCOPING_GUIDELINES} to ask "Is this plan okay?" or "Should I proceed?" - that's exactly what THIS tool does. ExitPlanMode inherently requests user approval of your plan.
 
 ## Examples
 
 1. Initial task: "Search for and understand the implementation of vim mode in the codebase" - Do not use the exit plan mode tool because you are not planning the implementation steps of a task.
 2. Initial task: "Help me implement yank mode for vim" - Use the exit plan mode tool after you have finished planning the implementation steps of the task.
-3. Initial task: "Add a new feature to handle user authentication" - If unsure about auth method (OAuth, JWT, etc.), use ${ASK_USER_QUESTION_TOOL_NAME} first, then use exit plan mode tool after clarifying the approach.
+3. Initial task: "Add a new feature to handle user authentication" - If unsure about auth method (OAuth, JWT, etc.), use ${PERMISSION_SCOPING_GUIDELINES} first, then use exit plan mode tool after clarifying the approach.

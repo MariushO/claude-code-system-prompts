@@ -38,6 +38,9 @@ This repository contains an up-to-date list of all Claude Code's various system 
 
 **This repository is updated within minutes of each Claude Code release.  See the [changelog](./CHANGELOG.md), and follow [@PiebaldAI](https://x.com/PiebaldAI) on X for a summary of the system prompt changes in each release.**
 
+> [!note]
+> ⭐ **Star** this repository to get notified about new Claude Code versions.  For each new Claude Code version, we create a release on GitHub, which will notify all users who've starred the repository.
+
 ---
 
 Why multiple "system prompts?"
